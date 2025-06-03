@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cálculo de Adoção</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <section class="container">
     <h1>Calculadora de Probabilidade de Adoção</h1>
 
     <label for="peso">Peso do animal (kg):</label>
@@ -17,10 +19,12 @@
     <br><br>
 
     <button onclick="calculoAdocao()">Calcular Probabilidade</button>
+    <button onclick="limparResultado()">limpar resultado</button>
 
     <h2>Resultado:</h2>
     <div id="resultadoCalculoPesoIdade"></div> <!-- Corrigido o id -->
+    </section>
 
-    <script src="js/exercicio.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>

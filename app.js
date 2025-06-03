@@ -5,6 +5,8 @@ function calculoAdocao(){
     const idade = parseInt(idadeInput.value);
     let notaFinal = 10;
     const resultadoCalculoPesoIdade = document.getElementById('resultadoCalculoPesoIdade'); // Corrigido o id
+    pesoInput.value = ""; // Limpa o campo de peso
+    idadeInput.value = ""; // Limpa o campo de idade
 
     // Corrigido: primeiro verifica o maior valor
     if (peso > 20){
@@ -23,11 +25,24 @@ function calculoAdocao(){
 
     if (notaFinal > 7){
        resultadoCalculoPesoIdade.innerHTML = "A probabilidade de adoção é alta";
+       resultadoCalculoPesoIdade.style.color = "green"; // Texto verde para alta probabilidade
+       resultadoCalculoPesoIdade.style.fontWeight = "bold"; // Deixa em negrito
+       resultadoCalculoPesoIdade.style.fontSize = "27px"; // Deixa em negrito
     }
+    
     else if (notaFinal >= 5 && notaFinal <= 7){
        resultadoCalculoPesoIdade.innerHTML = "A probabilidade de adoção é média";
+       resultadoCalculoPesoIdade.style.color = "orange"; // Texto verde para alta probabilidade
+       resultadoCalculoPesoIdade.style.fontWeight = "normal"; // Deixa em negrito
+       resultadoCalculoPesoIdade.style.fontSize = "27px"; // Deixa em negrito
     }
     else {
         resultadoCalculoPesoIdade.innerHTML = "A probabilidade de adoção é baixa";
+        resultadoCalculoPesoIdade.style.color = "red"; // Texto verde para alta probabilidade
+        resultadoCalculoPesoIdade.style.fontWeight = "bold"; // Deixa em negrito
+        resultadoCalculoPesoIdade.style.fontSize = "27px"; // Deixa em negrito
     }
+}
+function limparResultado() {
+    resultadoCalculoPesoIdade.innerHTML = ''; // Limpa o resultado
 }
